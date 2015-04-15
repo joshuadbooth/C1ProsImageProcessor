@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1331A22D1ADEDA4D00BFF873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1331A22C1ADEDA4D00BFF873 /* AppDelegate.m */; };
+		1331A22F1ADEDA4D00BFF873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1331A22E1ADEDA4D00BFF873 /* main.m */; };
+		1331A2311ADEDA4D00BFF873 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1331A2301ADEDA4D00BFF873 /* Images.xcassets */; };
+		1331A2341ADEDA4D00BFF873 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1331A2321ADEDA4D00BFF873 /* MainMenu.xib */; };
+		1331A2401ADEDA4D00BFF873 /* C1Pros_Image_ProcessorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1331A23F1ADEDA4D00BFF873 /* C1Pros_Image_ProcessorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1331A23A1ADEDA4D00BFF873 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1331A21E1ADEDA4D00BFF873 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1331A2251ADEDA4D00BFF873;
+			remoteInfo = "C1Pros Image Processor";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1331A2261ADEDA4D00BFF873 /* C1Pros Image Processor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C1Pros Image Processor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1331A22A1ADEDA4D00BFF873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1331A22B1ADEDA4D00BFF873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1331A22C1ADEDA4D00BFF873 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1331A22E1ADEDA4D00BFF873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1331A2301ADEDA4D00BFF873 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1331A2331ADEDA4D00BFF873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1331A2391ADEDA4D00BFF873 /* C1Pros Image ProcessorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "C1Pros Image ProcessorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1331A23E1ADEDA4D00BFF873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1331A23F1ADEDA4D00BFF873 /* C1Pros_Image_ProcessorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C1Pros_Image_ProcessorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1331A2231ADEDA4D00BFF873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1331A2361ADEDA4D00BFF873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1331A21D1ADEDA4D00BFF873 = {
+			isa = PBXGroup;
+			children = (
+				1331A2281ADEDA4D00BFF873 /* C1Pros Image Processor */,
+				1331A23C1ADEDA4D00BFF873 /* C1Pros Image ProcessorTests */,
+				1331A2271ADEDA4D00BFF873 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1331A2271ADEDA4D00BFF873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1331A2261ADEDA4D00BFF873 /* C1Pros Image Processor.app */,
+				1331A2391ADEDA4D00BFF873 /* C1Pros Image ProcessorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1331A2281ADEDA4D00BFF873 /* C1Pros Image Processor */ = {
+			isa = PBXGroup;
+			children = (
+				1331A22B1ADEDA4D00BFF873 /* AppDelegate.h */,
+				1331A22C1ADEDA4D00BFF873 /* AppDelegate.m */,
+				1331A2301ADEDA4D00BFF873 /* Images.xcassets */,
+				1331A2321ADEDA4D00BFF873 /* MainMenu.xib */,
+				1331A2291ADEDA4D00BFF873 /* Supporting Files */,
+			);
+			path = "C1Pros Image Processor";
+			sourceTree = "<group>";
+		};
+		1331A2291ADEDA4D00BFF873 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1331A22A1ADEDA4D00BFF873 /* Info.plist */,
+				1331A22E1ADEDA4D00BFF873 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1331A23C1ADEDA4D00BFF873 /* C1Pros Image ProcessorTests */ = {
+			isa = PBXGroup;
+			children = (
+				1331A23F1ADEDA4D00BFF873 /* C1Pros_Image_ProcessorTests.m */,
+				1331A23D1ADEDA4D00BFF873 /* Supporting Files */,
+			);
+			path = "C1Pros Image ProcessorTests";
+			sourceTree = "<group>";
+		};
+		1331A23D1ADEDA4D00BFF873 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1331A23E1ADEDA4D00BFF873 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1331A2251ADEDA4D00BFF873 /* C1Pros Image Processor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1331A2431ADEDA4D00BFF873 /* Build configuration list for PBXNativeTarget "C1Pros Image Processor" */;
+			buildPhases = (
+				1331A2221ADEDA4D00BFF873 /* Sources */,
+				1331A2231ADEDA4D00BFF873 /* Frameworks */,
+				1331A2241ADEDA4D00BFF873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "C1Pros Image Processor";
+			productName = "C1Pros Image Processor";
+			productReference = 1331A2261ADEDA4D00BFF873 /* C1Pros Image Processor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1331A2381ADEDA4D00BFF873 /* C1Pros Image ProcessorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1331A2461ADEDA4D00BFF873 /* Build configuration list for PBXNativeTarget "C1Pros Image ProcessorTests" */;
+			buildPhases = (
+				1331A2351ADEDA4D00BFF873 /* Sources */,
+				1331A2361ADEDA4D00BFF873 /* Frameworks */,
+				1331A2371ADEDA4D00BFF873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1331A23B1ADEDA4D00BFF873 /* PBXTargetDependency */,
+			);
+			name = "C1Pros Image ProcessorTests";
+			productName = "C1Pros Image ProcessorTests";
+			productReference = 1331A2391ADEDA4D00BFF873 /* C1Pros Image ProcessorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1331A21E1ADEDA4D00BFF873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Capture Integration, Inc";
+				TargetAttributes = {
+					1331A2251ADEDA4D00BFF873 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					1331A2381ADEDA4D00BFF873 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 1331A2251ADEDA4D00BFF873;
+					};
+				};
+			};
+			buildConfigurationList = 1331A2211ADEDA4D00BFF873 /* Build configuration list for PBXProject "C1Pros Image Processor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1331A21D1ADEDA4D00BFF873;
+			productRefGroup = 1331A2271ADEDA4D00BFF873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1331A2251ADEDA4D00BFF873 /* C1Pros Image Processor */,
+				1331A2381ADEDA4D00BFF873 /* C1Pros Image ProcessorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1331A2241ADEDA4D00BFF873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1331A2311ADEDA4D00BFF873 /* Images.xcassets in Resources */,
+				1331A2341ADEDA4D00BFF873 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1331A2371ADEDA4D00BFF873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1331A2221ADEDA4D00BFF873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1331A22F1ADEDA4D00BFF873 /* main.m in Sources */,
+				1331A22D1ADEDA4D00BFF873 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1331A2351ADEDA4D00BFF873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1331A2401ADEDA4D00BFF873 /* C1Pros_Image_ProcessorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1331A23B1ADEDA4D00BFF873 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1331A2251ADEDA4D00BFF873 /* C1Pros Image Processor */;
+			targetProxy = 1331A23A1ADEDA4D00BFF873 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1331A2321ADEDA4D00BFF873 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1331A2331ADEDA4D00BFF873 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1331A2411ADEDA4D00BFF873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1331A2421ADEDA4D00BFF873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1331A2441ADEDA4D00BFF873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "C1Pros Image Processor/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1331A2451ADEDA4D00BFF873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "C1Pros Image Processor/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1331A2471ADEDA4D00BFF873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "C1Pros Image ProcessorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/C1Pros Image Processor.app/Contents/MacOS/C1Pros Image Processor";
+			};
+			name = Debug;
+		};
+		1331A2481ADEDA4D00BFF873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "C1Pros Image ProcessorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/C1Pros Image Processor.app/Contents/MacOS/C1Pros Image Processor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1331A2211ADEDA4D00BFF873 /* Build configuration list for PBXProject "C1Pros Image Processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1331A2411ADEDA4D00BFF873 /* Debug */,
+				1331A2421ADEDA4D00BFF873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1331A2431ADEDA4D00BFF873 /* Build configuration list for PBXNativeTarget "C1Pros Image Processor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1331A2441ADEDA4D00BFF873 /* Debug */,
+				1331A2451ADEDA4D00BFF873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1331A2461ADEDA4D00BFF873 /* Build configuration list for PBXNativeTarget "C1Pros Image ProcessorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1331A2471ADEDA4D00BFF873 /* Debug */,
+				1331A2481ADEDA4D00BFF873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1331A21E1ADEDA4D00BFF873 /* Project object */;
+}
