@@ -146,7 +146,7 @@
     [_demoButton setEnabled:YES];
     [_demoButton setKeyEquivalent:@"\r"];
     
-    BOOL *activated = [[ActivationController sharedInstance] checkRegistrationForAppID:@"C1PIP" inFolder:@"C1Pros Image Processor" forFile:@"C1PIPlicense" isHidden:NO];
+    BOOL activated = [[ActivationController sharedInstance] checkRegistrationForAppID:@"C1PIP" inFolder:@"C1Pros Image Processor" forFile:@"C1PIPlicense" isHidden:NO];
     
     
     
