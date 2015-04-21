@@ -18,6 +18,8 @@
 
 @implementation MainViewController
 @synthesize mainWindow = _mainWindow;
+@synthesize eventsWindow = _eventsWindow;
+@synthesize ignoreEventsWarning;
 
 + (MainViewController *) sharedInstance {
     static MainViewController * sharedInstance = nil;
@@ -101,12 +103,18 @@
 
 - (IBAction)startProcessing:(id)sender {
     NSLog(@"Start Processing");
-    [[C1AppController sharedInstance] startProcessing];
+    if (([_resizeJPEG state] || [_resizeTIFF state]) && (!ignoreEventsWarning)) {
+        
+        [NSApp beginSheet:_eventsWindow modalForWindow:nil modalDelegate:self didEndSelector:@selector(didEndSheet:returnCode:contextInfo:) contextInfo:nil];
+        
+    } else {
     
+    [[C1AppController sharedInstance] startProcessing];
+    }
 }
 
 - (IBAction)loadDefaultValues:(id)sender {
-    [self.view.window setTitle:@"Blah"];
+    [[C1AppController sharedInstance] loadDefaults];
 }
 
 - (IBAction)startRegistration:(id)sender {
@@ -424,4 +432,22 @@
     }
 }
 
+- (IBAction)continueOn:(id)sender {
+    
+    if ([_disableEventsWarning state]) {
+        ignoreEventsWarning = YES;
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setBool:YES forKey:@"ignoreEventsWarning"];
+        [prefs synchronize];
+    } else {
+        ignoreEventsWarning = NO;
+    }
+    
+    [[C1AppController sharedInstance] startProcessing];
+    [NSApp endSheet:_eventsWindow ];
+}
+- (IBAction)cancelEventsWarning:(id)sender {
+    [NSApp endSheet:_eventsWindow];
+    
+}
 @end

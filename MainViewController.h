@@ -107,4 +107,13 @@
 
 - (IBAction)forceCheckRequirements: (id)sender;
 - (void) checkRequirements;
+
+// Events Warning Window
+@property (strong) IBOutlet NSWindow *eventsWindow;
+@property (weak) IBOutlet NSButton *disableEventsWarning;
+- (IBAction)continueOn:(id)sender;
+- (IBAction)cancelEventsWarning:(id)sender;
+@property BOOL ignoreEventsWarning;
+
+
 @end

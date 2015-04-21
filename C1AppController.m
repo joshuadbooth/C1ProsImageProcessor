@@ -690,6 +690,7 @@ BOOL stopIteration = NO;
         NSLog(@"Prefs found");
 
         // General Preferences
+        [MainViewController sharedInstance].ignoreEventsWarning = [prefs boolForKey:@"ignoreEventsWarning"];
         
         [[[MainViewController sharedInstance] groupingMenu] selectItemWithTitle:[prefs stringForKey:@"Grouping"]];
         [[MainViewController sharedInstance] changeGrouping:self];
@@ -767,11 +768,13 @@ BOOL stopIteration = NO;
     // General Preferences
     [prefs setObject:@"Sub Folder" forKey:@"Grouping"];
     [prefs setBool:YES forKey:@"renameVariants"];
+    [prefs setBool:NO forKey:@"ignoreEventsWarning"];
     
     // Available ICCs
     NSArray *ICCs = [NSArray arrayWithObjects: @"Choose Before Processing", @"Embed camera profile", @"Adobe RGB (1998)", @"sRGB Color Space Profile", @"ProPhoto", @"Generic CMYK Profile", nil];
     
     [prefs setObject:ICCs forKey:@"AvailableICCs"];
+    
     
     // JPEG prefs
     [prefs setBool:YES forKey:@"SaveAsJPEG"];
