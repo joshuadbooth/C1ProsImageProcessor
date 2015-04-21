@@ -120,22 +120,15 @@ BOOL stopIteration = NO;
     }
     
     
-    // first create recipes and see if need to adjust before iteration
-    //[mainWindow performSegueWithIdentifier:@"segueToProgress" sender:nil];
     
     
+    // Show progress window for creating recipes
     [[ProgressViewController sharedInstance] init];
-    [[ProgressViewController sharedInstance].view.window  makeKeyAndOrderFront:nil];
     [[ProgressViewController sharedInstance] updateStatus:@"Creating Recipes"];
+    [[ProgressViewController sharedInstance] resetProgressBar];
+    [[ProgressViewController sharedInstance].view.window  makeKeyAndOrderFront:nil];
     
-    /*
-    // waits 1 seconds before launching activation
-    double delayInSeconds = 1.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self createRecipes];
-    });
-*/
+    
     
     void (^processingBlock) (void);
     processingBlock = ^ {
@@ -143,16 +136,19 @@ BOOL stopIteration = NO;
         [self createRecipes];
         
         if (self.waitBeforeProcessing) {
-            // [mainWindow performSegueWithIdentifier:@"segueToWait" sender:mainWindow];
-            WaitViewController *waitWindow = [[WaitViewController alloc] initWithNibName:@"WaitWindow" bundle:[NSBundle mainBundle]];
-            [waitWindow.waitWindow makeKeyAndOrderFront:nil];
-            [[mainWindow mainWindow] orderOut:nil];
+            
+            WaitViewController *waitWindow = [[WaitViewController sharedInstance] initWithNibName:@"WaitWindow" bundle:[NSBundle mainBundle]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^ {
+                [NSApp beginSheet:waitWindow.view.window modalForWindow:[ProgressViewController sharedInstance].view.window modalDelegate:self didEndSelector:nil contextInfo:nil];
+            });
+            
             
         } else {
             //[[ProgressViewController sharedInstance] init];
             //[[ProgressViewController sharedInstance].view.window  makeKeyAndOrderFront:nil];
             
-            [[mainWindow mainWindow] orderOut:nil];
+            [[MainViewController sharedInstance].view.window orderOut:nil];
             
             [self iterate];
         }
@@ -240,11 +236,11 @@ BOOL stopIteration = NO;
         }
         
         //ICC Profile Assignment
-        if (![[mainWindow.jpegICC titleOfSelectedItem] isEqualToString:@"Choose Before Processing"]) {
-            if ([[mainWindow.jpegICC titleOfSelectedItem] isEqualToString:@"Embed camera profile"]){
+        if (![[[MainViewController sharedInstance].jpegICC titleOfSelectedItem] isEqualToString:@"Choose Before Processing"]) {
+            if ([[[MainViewController sharedInstance].jpegICC titleOfSelectedItem] isEqualToString:@"Embed camera profile"]){
                 JPEGrecipe.recipe.colorProfile = @"";
             } else {
-                JPEGrecipe.recipe.colorProfile = [mainWindow.jpegICC titleOfSelectedItem];
+                JPEGrecipe.recipe.colorProfile = [[MainViewController sharedInstance].jpegICC titleOfSelectedItem];
             }
         } else {
             NSLog(@"JPEG: I'm supposed to wait before processing.");

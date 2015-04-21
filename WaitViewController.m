@@ -15,6 +15,15 @@
 
 @implementation WaitViewController
 
++ (WaitViewController *) sharedInstance {
+    static WaitViewController * sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^ {
+        sharedInstance = [[[self class] alloc] init];
+    });
+    return sharedInstance;
+}
+
 - (void)loadView {
     [super loadView];
     // Do view setup here.
@@ -42,11 +51,12 @@
 
 - (IBAction)okProceed:(id)sender {
     // close waitWindow & setupWindow
-    
-    [_waitWindow orderOut:self];
-    [[MainViewController sharedInstance].mainWindow orderOut:nil];
-    
-    [[MainViewController sharedInstance].mainWindow makeKeyAndOrderFront:[ProgressViewController sharedInstance].progressWindow];
+    dispatch_async(dispatch_get_main_queue(), ^ {
+        [NSApp endSheet:self.view.window];
+        [self.view.window orderOut:self];
+        [[MainViewController sharedInstance].view.window orderOut:nil];
+        [[ProgressViewController sharedInstance].view.window makeKeyAndOrderFront:nil];
+    });
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
@@ -101,5 +111,11 @@
 }
 
 - (IBAction)cancelAndReturnToSetup:(id)sender {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+    [NSApp endSheet:self.view.window];
+        [[ProgressViewController sharedInstance].view.window orderOut:nil];
+        [self.view.window orderOut:nil];
+    });
 }
 @end

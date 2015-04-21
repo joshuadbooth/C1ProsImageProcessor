@@ -7,12 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class WaitViewController;
 
 @interface WaitViewController : NSViewController
 @property (strong) IBOutlet NSWindow *waitWindow;
 - (IBAction)okProceed:(id)sender;
 - (IBAction)cancelAndReturnToSetup:(id)sender;
 
++ (WaitViewController*) sharedInstance;
 - (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 
 @end
