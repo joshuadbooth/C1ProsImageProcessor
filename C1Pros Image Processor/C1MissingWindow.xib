@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="C1MissingViewController">
+            <connections>
+                <outlet property="defaultWindow" destination="QvC-M9-y7g" id="FxD-RI-Y3c"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="eHD-PX-3Dj"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window identifier="c1MissingWindow" title="C1Pros Image Processor: Cannot locate Capture One Pro" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="727" y="687" width="566" height="172"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <value key="minSize" type="size" width="566" height="172"/>
+            <value key="maxSize" type="size" width="566" height="172"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="566" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOJ-nm-hBC">
+                        <rect key="frame" x="20" y="20" width="132" height="132"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="CO8 logo" id="jfL-hd-MKP"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyK-TB-z10">
+                        <rect key="frame" x="158" y="61" width="390" height="92"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="QUK-Eb-nfO">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Capture One Pro 8 is required for this application, but it's installation could not be detected.   Please install Capture One Pro 8 and run this program again. If this is incorrect, please email support.</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAF-iQ-agx">
+                        <rect key="frame" x="486" y="13" width="66" height="32"/>
+                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WRf-L4-bJS">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="quitBtn:" target="-2" id="eOC-co-AX4"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-kA-GRN">
+                        <rect key="frame" x="347" y="13" width="128" height="32"/>
+                        <buttonCell key="cell" type="push" title="Email Support" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="obj-cf-LdE">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="emailBtn:" target="-2" id="elT-SB-Qer"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kNb-yT-Spe">
+                        <rect key="frame" x="154" y="13" width="181" height="32"/>
+                        <buttonCell key="cell" type="push" title="Get Capture One Pro 8" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ugp-s6-rmr">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="downloadC1Btn:" target="-2" id="ZWy-LI-njJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+    <resources>
+        <image name="CO8 logo" width="132" height="133"/>
+    </resources>
+</document>

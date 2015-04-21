@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CompletionViewController">
+            <connections>
+                <outlet property="completeWindow" destination="QvC-M9-y7g" id="00w-5U-btp"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="WEH-fb-Y36"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window identifier="completeWindow" title="C1Pros Image Processor Complete" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="585" y="570" width="500" height="310"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <value key="minSize" type="size" width="500" height="310"/>
+            <value key="maxSize" type="size" width="500" height="310"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="310"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="unr-k7-98A">
+                        <rect key="frame" x="393" y="13" width="91" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="79" id="JpM-u4-P3b"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BQ7-iK-p5G">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                    </button>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="57w-hJ-vHb">
+                        <rect key="frame" x="0.0" y="163" width="500" height="146"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="IP Banner White" id="pOu-sO-LxP"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xv3-zG-oXr">
+                        <rect key="frame" x="18" y="133" width="464" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="pVF-mR-FXL"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="C1 Pros Image Processor Complete!" id="b9H-1f-yuw">
+                            <font key="font" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yUm-Fo-rlJ">
+                        <rect key="frame" x="18" y="49" width="462" height="76"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="TJe-sC-43x"/>
+                        </constraints>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="lxo-GO-6sH">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">C1 Image Processor has finished sending images to Capture One to process. Depending on the number of images, this may take some time to complete. You will receive a notification from Capture One once the processing has finished. You can now quit this application!</string>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xv3-zG-oXr" firstAttribute="top" secondItem="57w-hJ-vHb" secondAttribute="bottom" constant="5" id="69B-W7-FV6"/>
+                    <constraint firstItem="yUm-Fo-rlJ" firstAttribute="trailing" secondItem="unr-k7-98A" secondAttribute="trailing" id="6h0-IF-uMa"/>
+                    <constraint firstItem="57w-hJ-vHb" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="LpD-Mo-E3j"/>
+                    <constraint firstAttribute="bottom" secondItem="unr-k7-98A" secondAttribute="bottom" constant="20" symbolic="YES" id="XuS-vg-tB3"/>
+                    <constraint firstItem="Xv3-zG-oXr" firstAttribute="centerX" secondItem="57w-hJ-vHb" secondAttribute="centerX" id="i4w-Lv-Ppv"/>
+                    <constraint firstItem="unr-k7-98A" firstAttribute="top" secondItem="yUm-Fo-rlJ" secondAttribute="bottom" constant="8" symbolic="YES" id="iim-lR-HR1"/>
+                    <constraint firstItem="Xv3-zG-oXr" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="kKD-JS-pmO"/>
+                    <constraint firstItem="yUm-Fo-rlJ" firstAttribute="top" secondItem="Xv3-zG-oXr" secondAttribute="bottom" constant="8" symbolic="YES" id="pLB-p8-7Fq"/>
+                    <constraint firstItem="yUm-Fo-rlJ" firstAttribute="leading" secondItem="Xv3-zG-oXr" secondAttribute="leading" id="taC-zm-wOL"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="480" y="739"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="IP Banner White" width="500" height="146"/>
+    </resources>
+</document>

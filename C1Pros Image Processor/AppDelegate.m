@@ -7,16 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    MainViewController *mainVC = [[MainViewController sharedInstance] initWithNibName:@"SetupWindow" bundle:[NSBundle mainBundle]];
+    [mainVC loadView];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
