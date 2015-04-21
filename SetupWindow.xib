@@ -436,7 +436,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-hd-Mvu">
-                                            <rect key="frame" x="67" y="301" width="95" height="18"/>
+                                            <rect key="frame" x="67" y="301" width="106" height="18"/>
                                             <buttonCell key="cell" type="check" title="Ignore Crop" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pVl-un-6Sk">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
