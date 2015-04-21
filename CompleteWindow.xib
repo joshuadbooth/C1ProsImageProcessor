@@ -36,6 +36,9 @@
 DQ
 </string>
                         </buttonCell>
+                        <connections>
+                            <action selector="terminate:" target="-1" id="g6u-Di-C7d"/>
+                        </connections>
                     </button>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="57w-hJ-vHb">
                         <rect key="frame" x="0.0" y="163" width="500" height="146"/>

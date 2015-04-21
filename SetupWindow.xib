@@ -396,7 +396,7 @@ DQ
                                             </textFieldCell>
                                         </textField>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S8b-M2-k2t">
-                                            <rect key="frame" x="67" y="245" width="192" height="18"/>
+                                            <rect key="frame" x="67" y="245" width="201" height="18"/>
                                             <buttonCell key="cell" type="check" title="Include Rating &amp; Color Tag" bezelStyle="regularSquare" imagePosition="left" inset="2" id="XsS-Ly-U3y">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -406,7 +406,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQg-bf-5aU">
-                                            <rect key="frame" x="67" y="225" width="132" height="18"/>
+                                            <rect key="frame" x="67" y="225" width="142" height="18"/>
                                             <buttonCell key="cell" type="check" title="Include Copyright" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="sBR-zi-ZDZ">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -636,7 +636,7 @@ DQ
                                             </textFieldCell>
                                         </textField>
                                         <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="npY-d6-74P">
-                                            <rect key="frame" x="13" y="334" width="431" height="4"/>
+                                            <rect key="frame" x="13" y="334" width="431" height="5"/>
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <font key="titleFont" metaFont="system"/>
@@ -700,7 +700,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sui-eH-BKw">
-                                            <rect key="frame" x="71" y="287" width="142" height="18"/>
+                                            <rect key="frame" x="71" y="287" width="154" height="18"/>
                                             <buttonCell key="cell" type="check" title="Disable Sharpening" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zry-Ah-XzB">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -720,7 +720,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhz-mh-nDg">
-                                            <rect key="frame" x="71" y="191" width="132" height="18"/>
+                                            <rect key="frame" x="71" y="191" width="145" height="18"/>
                                             <buttonCell key="cell" type="check" title="Include Copyright" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="FBy-Wo-kfQ">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -750,7 +750,7 @@ DQ
                                             </connections>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dyw-gr-bYt">
-                                            <rect key="frame" x="71" y="267" width="95" height="18"/>
+                                            <rect key="frame" x="71" y="267" width="123" height="18"/>
                                             <buttonCell key="cell" type="check" title="Ignore Crop" bezelStyle="regularSquare" imagePosition="left" inset="2" id="AAn-Jw-u56">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>

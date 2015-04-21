@@ -372,6 +372,17 @@
 
 - (void) changeGrouping:(id)sender {
     
+    if ([[_groupingMenu titleOfSelectedItem] isEqualToString:@"Sub Folder"]) {
+        NSLog(@"Group by subFolder");
+        
+        [_groupingDescription setStringValue:@"Sub folders appear in same hierarchy as the selection from Step 1, with each sub folder containing a JPEG & TIFF folder.\r\rExample: \rOutput > Shot 1 > JPEG, TIFF\rOutput > Shot 2 > JPEG, TIFF"];
+        
+    } else {
+        NSLog(@"Group by file type");
+        [_groupingDescription setStringValue:@"Output folder contains two folders (JPEG & TIFF) which each contain sub folders following the same hierarchy as the selected folder from Step 1.\r\rExample: \rOutput > JPEG > Shot 1, Shot 2, ...\rOutput > TIFF > Shot 1, Shot 2, ..."];
+    }
+    [self checkRequirements];
+    
 }
 
 -(void) checkForC1Pro {
