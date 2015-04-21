@@ -113,22 +113,20 @@
     NSLog(@"Starting Registration");
     
     ActivationViewController *activationVC = [ActivationViewController sharedInstance];
-    NSLog(@"Activation View: %@", activationVC.view.identifier);
+    [activationVC loadView];
     
    [NSApp beginSheet:activationVC.view.window
       modalForWindow:self.view.window
        modalDelegate:self
       didEndSelector:@selector(didEndSheet:returnCode:contextInfo:)
          contextInfo:nil];
-    
+
     [activationVC.activationWindow makeKeyAndOrderFront:nil];
     
 }
 
 -(void) didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-    NSLog(@"Now that THAT's over with");
     [sheet orderOut:nil];
-    
 }
 
 

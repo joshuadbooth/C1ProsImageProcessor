@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "ActivationViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,4 +27,24 @@
     // Insert code here to tear down your application
 }
 
+
+- (IBAction)deactivateLicense:(id)sender {
+    NSLog(@"Deactivating");
+    
+    [[MainViewController sharedInstance] startRegistration:nil];
+    
+    /*
+     ActivationController *deactivator = [ActivationController sharedInstance];
+     
+     BOOL deactivated = [deactivator deactivateMeinFolder:@"C1Pros Image Processor" forFile:@"C1PIPlicense" isHidden:NO];
+     if (deactivated) {
+     [_deactivateButton setEnabled:NO];
+     [C1AppController sharedInstance].discussionOver = NO;
+     [[NSApplication sharedApplication] terminate:self];
+     } else {
+     [_deactivateButton setEnabled:YES];
+     
+     }
+     */
+}
 @end
