@@ -59,7 +59,9 @@
         [_activateButton setEnabled:NO];
         [_demoButton setEnabled:NO];
         
-        BOOL pointMade = [[ActivationController sharedInstance] checkRegistration:self.userKey.stringValue userName:self.userName.stringValue userEmail:self.userEmail.stringValue];
+        NSString *fullKey = [[ActivationController sharedInstance] rebuildLicense:self.userKey.stringValue];
+        
+        BOOL pointMade = [[ActivationController sharedInstance] checkRegistration:fullKey userName:self.userName.stringValue userEmail:self.userEmail.stringValue];
         
         NSLog(@"Point Made? %i", pointMade);
         
@@ -77,8 +79,8 @@
             self.userName.editable = NO;
             self.userEmail.editable = NO;
             
-            // waits 2 seconds before launching activation
-            double delayInSeconds = 2.0;
+            // waits 1 second before launching activation
+            double delayInSeconds = 1.0;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 
@@ -118,8 +120,8 @@
             [[C1AppController sharedInstance].mainWindow.view.window setTitle:@"C1Pros Image Processor *DEMO MODE*"];
             [[C1AppController sharedInstance].mainWindow.registerBtn setHidden:NO];
             
-            // waits 2 seconds before launching activation
-            double delayInSeconds = 2.0;
+            // waits 1 second before launching activation
+            double delayInSeconds = 1.0;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 

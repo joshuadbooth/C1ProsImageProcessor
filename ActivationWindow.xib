@@ -20,11 +20,10 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Activation" allowsToolTipsWhenApplicationIsInactive="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window identifier="activationWindow" title="Activation" allowsToolTipsWhenApplicationIsInactive="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="642" y="618" width="500" height="543"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" identifier="ActivationView" canDrawConcurrently="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="-4" width="500" height="543"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -50,9 +49,9 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vTF-7G-Cst">
-                        <rect key="frame" x="17" y="310" width="44" height="17"/>
+                        <rect key="frame" x="17" y="310" width="52" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="1Gj-3D-j6M"/>
+                            <constraint firstAttribute="width" constant="48" id="1Gj-3D-j6M"/>
                         </constraints>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name:" id="mYu-kQ-p7X">
                             <font key="font" metaFont="systemBold"/>
@@ -106,9 +105,9 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rlg-uL-YXC">
-                        <rect key="frame" x="18" y="200" width="83" height="17"/>
+                        <rect key="frame" x="18" y="200" width="96" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="79" id="0S7-lA-pjr"/>
+                            <constraint firstAttribute="width" constant="92" id="0S7-lA-pjr"/>
                         </constraints>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="License Key:" id="REw-Wm-5kV">
                             <font key="font" metaFont="systemBold"/>

@@ -36,6 +36,8 @@
                            forFile:(NSString*)filename
                           isHidden:(BOOL)isHidden;
 
+- (NSString *) rebuildLicense:(NSString*) license;
+
 - (NSDictionary *) getLicenseInfoFromFolder:(NSString *)appFolder
                                     forFile:(NSString *)filename
                                    isHidden:(BOOL)isHidden;

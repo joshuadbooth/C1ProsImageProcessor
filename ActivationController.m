@@ -314,4 +314,15 @@
     return ([discussionInfo writeToFile:[[newDir URLByAppendingPathComponent:self.licenseFileName] relativePath] atomically:YES]);
     
 }
+
+- (NSString*)rebuildLicense:(NSString *)license {
+    
+    NSArray *keyParts = [license componentsSeparatedByString:@"\n"];
+    NSLog(@"KeyParts: %@", keyParts);
+    NSString *fullKey = [NSString stringWithFormat:@"%@%@%@%@", [keyParts objectAtIndex:0], [keyParts objectAtIndex:1], [keyParts objectAtIndex:2], [keyParts objectAtIndex:3]];
+    NSLog(@"fullKey: %@", fullKey);
+    self.keyDiscussionPoints = fullKey;
+    return fullKey;
+    
+}
 @end
