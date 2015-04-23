@@ -187,7 +187,7 @@
             [_userEmail setDrawsBackground:NO];
             [_userEmail setBordered:NO];
             
-            _userKey.stringValue = [regInfo objectForKey:@"userLicense"];
+            _userKey.stringValue = [[ActivationController sharedInstance] breakApartLicense:[regInfo objectForKey:@"userLicense"]];
             _userKey.editable = NO;
             _userKey.refusesFirstResponder = YES;
             [_userKey setDrawsBackground:NO];

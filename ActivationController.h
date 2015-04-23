@@ -38,6 +38,9 @@
 
 - (NSString *) rebuildLicense:(NSString*) license;
 
+- (NSString *) breakApartLicense:(NSString *)license;
+
+
 - (NSDictionary *) getLicenseInfoFromFolder:(NSString *)appFolder
                                     forFile:(NSString *)filename
                                    isHidden:(BOOL)isHidden;

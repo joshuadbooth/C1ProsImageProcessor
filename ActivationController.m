@@ -316,13 +316,54 @@
 }
 
 - (NSString*)rebuildLicense:(NSString *)license {
+    /*
+    NSLog(@"Key: %@", license);
+    NSArray *keyParts;
     
-    NSArray *keyParts = [license componentsSeparatedByString:@"\n"];
+        keyParts = [license componentsSeparatedByString:@"\n"];
+    if ([keyParts count] < 4) {
+         keyParts = [license componentsSeparatedByString:@"\r"];
+             if ([keyParts count] < 4) {
+                 keyParts = [license componentsSeparatedByString:@" "];
+             } else {
+                 NSLog(@"Error rebuilding license.");
+                 return license;
+             }
+    }
+    */
+    NSArray *keyParts = [license componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSLog(@"KeyParts: %@", keyParts);
     NSString *fullKey = [NSString stringWithFormat:@"%@%@%@%@", [keyParts objectAtIndex:0], [keyParts objectAtIndex:1], [keyParts objectAtIndex:2], [keyParts objectAtIndex:3]];
     NSLog(@"fullKey: %@", fullKey);
+    
+    //NSString *fullKey = [license componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    //NSLog(@"fullKey = %@", fullKey);
     self.keyDiscussionPoints = fullKey;
     return fullKey;
     
 }
+- (NSString *) breakApartLicense:(NSString *)license {
+    NSRange line1 = {0, 43};
+    NSRange line2 = {43, 43};
+    NSRange line3 = {86, 43};
+    NSRange line4 = {129, 43};
+    
+    NSString *keyLine1 = [license substringWithRange:line1];
+    NSLog(@"line1: %@", keyLine1);
+    
+    NSString *keyLine2 = [license substringWithRange:line2];
+    NSLog(@"line2: %@", keyLine2);
+    
+    NSString *keyLine3 = [license substringWithRange:line3];
+    NSLog(@"line3: %@", keyLine3);
+    
+    NSString *keyLine4 = [license substringWithRange:line4];
+    NSLog(@"line4: %@", keyLine4);
+    
+    
+    NSString *niceLicense = [NSString stringWithFormat:@"%@\r%@\r%@\r%@",keyLine1, keyLine2, keyLine3, keyLine4 ];
+    
+    return niceLicense;
+}
+
 @end
